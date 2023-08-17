@@ -21,7 +21,7 @@ function displayGameGrid(gridData, cols) {
 
         gameContainer.appendChild(cell);
     }
-
+    
     document.body.appendChild(gameContainer);
 }
 
