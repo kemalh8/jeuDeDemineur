@@ -6,13 +6,11 @@ document.getElementById('gameForm').addEventListener('submit', async (event) => 
     const cols = document.getElementById('cols').value;
     const mines = document.getElementById('mines').value;
 
-
       // Validate input values
       if (!playerName || isNaN(rows) || isNaN(cols) || isNaN(mines) || rows <= 0 || cols <= 0 || mines < 0) {
         alert('Please provide valid input values.');
         return;
     }
-
 
     // Fetch data using the fetchData function from gameLogic.js
     const gridData = await fetchData(rows, cols, mines);
@@ -20,8 +18,6 @@ document.getElementById('gameForm').addEventListener('submit', async (event) => 
     // Display grid and game UI elements
     displayGameGrid(gridData, cols); // Call the function from uiFunctions.js
     updateUI(playerName, mines); // Call the function from uiFunctions.js
-    // You might also want to attach click event listeners to cells here
-
 
       // Attach click event listeners to cells
       const cells = document.querySelectorAll('.cell');
@@ -30,8 +26,6 @@ document.getElementById('gameForm').addEventListener('submit', async (event) => 
       });
 
 });
-
-
 
 // Handle the click event on a cell
 function handleCellClick(cell, gridData, cols) {
