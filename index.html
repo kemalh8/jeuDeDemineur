@@ -5,46 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minesweeper Game</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body >
-    
-        <h1  >Minesweeper Game</h1>
+<body class="bg-black">
+    <div class="container my-5 ">
+        <h1 class="text-light  text-center ">Minesweeper Game</h1>
         
-        <form id="gameForm">
-            <div >
-                <label  for="playerName">Player Name:</label>
-                <input type="text" id="playerName" required>
+        <form id="gameForm" class="mt-4">
+            <div class="text-light mb-3">
+                <label for="playerName" class="form-label ">Player Name:</label>
+                <input type="text" id="playerName" class="form-control" required>
             </div>
 
-            <div >
-                <label  for="rows">Number of Rows:</label>
-                <input type="number" id="rows" required>
+            <div class="text-light mb-3">
+                <label for="rows" class="form-label">Number of Rows:</label>
+                <input type="number" id="rows" class="form-control" required>
             </div>
-            <div >
-                <label  for="cols">Number of Columns:</label>
-                <input type="number" id="cols" required>
+            <div class="text-light mb-3">
+                <label for="cols" class="form-label">Number of Columns:</label>
+                <input type="number" id="cols" class="form-control" required>
             </div>
-            <div >
-                <label for="mines">Number of Mines:</label>
-            <input type="number" id="mines" required>
+            <div class="text-light mb-3">
+                <label for="mines" class="form-label">Number of Mines:</label>
+                <input type="number" id="mines" class="form-control" required>
             </div>
             
-            <button type="submit">Start Game</button>
+            <button type="submit" class="btn btn-primary">Start Game</button>
         </form>
 
-        <div id="playerInfo" class="my-3"></div>
-        <div id="remainingMines" class="my-3"></div>
-        
-    
+        <div id="playerInfo" class="text-light my-3"></div>
+        <div id="remainingMines" class="text-light my-3"></div>
+    </div>
     
     <!-- JavaScript code -->
     <script src="uiFunctions.js"></script>
     <script src="gameLogic.js"></script>
     <script src="script.js"></script>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
